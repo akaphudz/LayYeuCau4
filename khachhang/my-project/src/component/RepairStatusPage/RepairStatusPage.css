@@ -1,0 +1,88 @@
+/* src/component/RepairStatusPage/RepairStatusPage.css */
+
+.repair-status-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.status-title {
+    text-align: center;
+    font-size: 28px;
+    color: #2a7ade;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.status-step {
+    border: 1px solid #d1e3f8;
+    border-left: 6px solid #2a7ade;
+    background-color: #eef5ff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+.status-step.completed {
+    border-left-color: #4caf50;
+    background-color: #e8f5e9;
+}
+
+.status-step-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a7ade;
+    margin-bottom: 10px;
+}
+
+.status-step.completed .status-step-title {
+    color: #4caf50;
+}
+
+.status-step-description {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.status-step-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.status-step-status.in-progress {
+    color: #ff9800;
+}
+
+.status-step-status.completed {
+    color: #4caf50;
+}
+
+.payment-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.payment-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.payment-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.payment-button:active {
+    background-color: #388e3c;
+}

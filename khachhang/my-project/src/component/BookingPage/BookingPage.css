@@ -1,0 +1,152 @@
+/* BookingPage.css */
+
+.booking-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.booking-page-title {
+    text-align: center;
+    color: #2a7ade;
+    margin-bottom: 20px;
+}
+
+.booking-content {
+    display: flex;
+    gap: 30px;
+}
+
+.product-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-details {
+    margin-top: 20px;
+}
+
+.current-price {
+    font-size: 24px;
+    color: #ff4b2b;
+    font-weight: bold;
+}
+
+.old-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount {
+    display: block;
+    margin-top: 5px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.booking-form-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-title {
+    color: #ff4b2b;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group select,
+.booking-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.booking-form .form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e03e24;
+}
+
+/* Modal xác nhận */
+.booking-confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmation-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.confirmation-content h2 {
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.close-button {
+    padding: 10px 20px;
+    background-color: #2a7ade;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close-button:hover {
+    background-color: #1e5ea8;
+}

@@ -1,0 +1,41 @@
+/* src/component/ShippingStatusPage/ShippingStatusPage.css */
+.shipping-status-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-status-container h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #2a7ade;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.order-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #4caf50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-details h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.order-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.order-details strong {
+    color: #2a7ade;
+}

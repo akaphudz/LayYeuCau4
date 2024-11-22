@@ -1,0 +1,86 @@
+/* src/component/OnlinePaymentPage/OnlinePaymentPage.css */
+
+.online-payment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.payment-title {
+    text-align: center;
+    font-size: 32px;
+    color: #2a7ade;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.payment-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.payment-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #2a7ade;
+    padding-bottom: 10px;
+}
+
+.delivery-options {
+    margin-top: 30px;
+}
+
+.delivery-options h2 {
+    font-size: 20px;
+    color: #2a7ade;
+    margin-bottom: 15px;
+}
+
+.option {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.delivery-address-form {
+    margin-top: 20px;
+}
+
+.delivery-address-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.delivery-address-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.confirm-payment-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.confirm-payment-button:hover {
+    background-color: #45a049;
+    transform: scale(1.03);
+}

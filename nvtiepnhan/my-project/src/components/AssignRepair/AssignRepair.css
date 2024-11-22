@@ -1,0 +1,9 @@
+.table-auto th {
+    background-color: #f3f4f6;
+    text-align: left;
+    font-weight: bold;
+  }
+  .table-auto td {
+    padding: 8px;
+  }
+  
