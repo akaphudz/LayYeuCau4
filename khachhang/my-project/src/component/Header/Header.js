@@ -1,12 +1,14 @@
-// src/component/Header.js
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext'; // Import CartContext
+import { Link, useNavigate } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+import { UserContext } from '../../context/UserContext'; 
 import './Header.css';
 
 const Header = () => {
-    const { cartItems } = useContext(CartContext); // Sử dụng CartContext để lấy thông tin giỏ hàng
-    const totalItems = cartItems.length; // Tổng số sản phẩm trong giỏ hàng
+    const { cartItems } = useContext(CartContext);
+    const { user } = useContext(UserContext);
+    const navigate = useNavigate();
+    const totalItems = cartItems.length;
 
     return (
         <header className="header">
@@ -19,10 +21,14 @@ const Header = () => {
                 </div>
                 <div className="update">
                     <Link to="/repair-status">
-                    <button>Xem cập nhật sửa chữa</button>
+                        <button>Xem cập nhật sửa chữa</button>
                     </Link>
-                    </div>
-
+                </div>
+                <div className="create-repair-button">
+                    <Link to="/create-repair">
+                        <button>Tạo Yêu Cầu Sửa Chữa</button>
+                    </Link>
+                </div>
             </div>
 
             <div className="search-bar">
@@ -31,10 +37,14 @@ const Header = () => {
             </div>
 
             <div className="header-right">
-                <Link to="/cart" className="cart">Giỏ hàng 🛒 ({totalItems})</Link> {/* Hiển thị số lượng sản phẩm trong giỏ hàng */}
+                <Link to="/cart" className="cart">Giỏ hàng 🛒 ({totalItems})</Link>
                 <Link to="/appointment" className="appointment">Vận Chuyển</Link>
                 <Link to="/contact" className="contact">Liên hệ</Link>
-                <Link to="/profile" className="profile-button">Mi</Link> {/* Thêm link đến trang profile */}
+                {user?.name ? (
+                    <div className="profile-button" onClick={() => navigate('/profile')}>{user.name.charAt(0)}</div>
+                ) : (
+                    <Link to="/login" className="login-button">Đăng nhập</Link>
+                )}
             </div>
         </header>
     );

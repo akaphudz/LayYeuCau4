@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { UserContext } from '../../context/UserContext';
 import './OnlinePaymentPage.css';
 
 const OnlinePaymentPage = () => {
     const { id } = useParams();
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
     const { user } = useContext(UserContext);
 
     const paymentDetails = {
@@ -25,12 +26,14 @@ const OnlinePaymentPage = () => {
 
         if (deliveryOption === 'store') {
             alert("Bạn đã thanh toán thành công, vui lòng đến cửa hàng nơi bạn đăng ký để nhận thiết bị.");
+            navigate(`/feedback/${id}`); // Điều hướng đến trang đánh giá sau khi người dùng bấm "OK"
         } else if (deliveryOption === 'delivery') {
             if (!deliveryAddress) {
                 alert("Vui lòng nhập địa chỉ giao hàng.");
                 return;
             }
             alert("Đơn hàng của bạn đã thanh toán thành công, vui lòng kiểm tra thông tin giao hàng trong mục Vận Chuyển trên trang chủ.");
+            navigate(`/feedback/${id}`); // Điều hướng đến trang đánh giá sau khi người dùng bấm "OK"
         }
     };
 

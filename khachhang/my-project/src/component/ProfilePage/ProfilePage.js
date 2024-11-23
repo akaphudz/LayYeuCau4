@@ -1,10 +1,12 @@
 // src/components/ProfilePage.js
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext'; // Đảm bảo bạn đang sử dụng đúng đường dẫn đến UserContext
 import './ProfileForm.css';
 
 const ProfilePage = () => {
     const { user, setUser } = useContext(UserContext); // Lấy giá trị từ context
+    const navigate = useNavigate(); // Hook để điều hướng
 
     // Thêm email vào state ban đầu với giá trị từ context hoặc mặc định.
     const [name, setName] = useState(user.name);
@@ -16,6 +18,15 @@ const ProfilePage = () => {
     const handleSave = () => {
         setUser({ name, phone, address, email });
         alert('Thông tin cá nhân đã được cập nhật!');
+    };
+
+    // Hàm để logout
+    const handleLogout = () => {
+        // Xóa thông tin đăng nhập khỏi localStorage
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('user');
+        setUser(null); // Xóa thông tin người dùng trong context
+        navigate('/'); // Điều hướng về trang chủ
     };
 
     return (
@@ -63,6 +74,9 @@ const ProfilePage = () => {
                 </button>
                 <button className="profile-form-button" onClick={() => window.history.back()}>
                     Quay lại
+                </button>
+                <button className="profile-form-button logout-button bg-red-500 text-white mt-4" onClick={handleLogout}>
+                    Đăng Xuất
                 </button>
             </div>
         </div>

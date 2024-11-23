@@ -1,90 +1,93 @@
-/* src/component/Header.css */
+/* Header.css */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1E90FF; /* Màu xanh blue */
-    padding: 10px 20px;
-    color: white;
+    background-color: #007bff; /* Màu nền xanh */
+    padding: 15px 30px; /* Thêm padding để tạo khoảng cách */
+    color: #fff;
 }
 
-.header-left, .header-right {
+.header-left {
     display: flex;
     align-items: center;
+    gap: 20px; /* Khoảng cách giữa các mục bên trái */
 }
 
-.logo a {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
+.logo {
+    font-size: 30px;
+    font-weight: bold; /* In đậm tên logo */
+    color: #ffffff;
     margin-right: 20px;
 }
 
-.menu-button button, .location button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 1em;
-    margin-right: 15px;
-    cursor: pointer;
+.logo a {
+    text-decoration: none;
+    color: inherit; /* Kế thừa màu của logo */
 }
 
-.menu-button button:hover, .update button:hover {
-    text-decoration: underline;
+.menu-button,
+.update,
+.create-repair-button {
+    margin-right: 20px;
+}
+
+.menu-button button,
+.update button,
+.create-repair-button button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: bold; /* In đậm các nút này */
+    cursor: pointer;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    max-width: 500px;
-    margin: 0 20px;
+    gap: 5px; /* Khoảng cách giữa input và button tìm kiếm */
 }
 
 .search-bar input {
-    flex-grow: 1;
     padding: 8px;
     border-radius: 4px;
-    border: none;
-    margin-right: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 200px;
 }
 
-.search-bar .search-icon {
-    background-color: #ffffff;
-    color: #1E90FF;
-    border: none;
+.search-bar button {
     padding: 8px;
+    background-color: #ffffff;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.header-right a {
-    color: white;
-    margin-left: 20px;
-    font-size: 1em;
-    text-decoration: none;
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa các mục bên phải */
 }
 
-.header-right a:hover {
-    text-decoration: underline;
+.header-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold; /* In đậm các mục bên phải */
 }
 
 .profile-button {
-    background-color: #FF6347; /* Màu đỏ cam để nổi bật hơn */
+    background-color: #ff6347; /* Nút profile màu đỏ cam */
+    color: white;
     border-radius: 50%;
-    padding: 10px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: white;
+    text-decoration: none;
+    font-weight: bold; /* In đậm ký tự profile */
     margin-left: 20px;
-}
-
-.profile-button:hover {
-    background-color: #FF4500; /* Tăng màu sắc khi hover để tạo hiệu ứng */
+    cursor: pointer;
 }
