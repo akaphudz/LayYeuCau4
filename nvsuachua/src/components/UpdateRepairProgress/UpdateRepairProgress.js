@@ -15,6 +15,16 @@ function UpdateRepairProgress() {
     navigate(`/repair-status/${orderId}`); // Điều hướng đến trang chi tiết của đơn hàng
   };
 
+  // Xử lý khi nhấn "Hoàn Tất Sửa Chữa"
+  const handleCompleteRepair = (orderId) => {
+    setOrders((prevOrders) =>
+      prevOrders.map((order) =>
+        order.id === orderId ? { ...order, status: 'Hoàn thành' } : order
+      )
+    );
+    alert(`Đơn hàng #${orderId} đã được hoàn tất và thông báo đã gửi đến nhân viên tiếp nhận.`);
+  };
+
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Cập Nhật Tiến Độ</h1>
@@ -29,7 +39,13 @@ function UpdateRepairProgress() {
           >
             Cập nhật tiến độ
           </button>
-          <button className="mt-4 ml-2 bg-green-500 text-white px-4 py-2 rounded-lg">
+          <button
+            onClick={() => handleCompleteRepair(order.id)} // Gọi hàm xử lý hoàn tất sửa chữa
+            className="mt-4 ml-2 bg-green-500 text-white px-4 py-2 rounded-lg"
+          >
+            Hoàn Tất Sửa Chữa
+          </button>
+          <button className="mt-4 ml-2 bg-yellow-500 text-white px-4 py-2 rounded-lg">
             Gửi thông tin cho nhân viên sửa chữa
           </button>
         </div>
